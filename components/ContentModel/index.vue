@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { siteConfig: { stieDomain } } = useAppConfig()
-const siteUrl = stieDomain.split('.')
 
 const mobileToggle = useMobileToggle()
 const timeCapsuleToggle = useTimeCapsuleToggle()
@@ -14,8 +13,8 @@ const timeCapsuleToggle = useTimeCapsuleToggle()
         </div>
         <div v-show="!timeCapsuleToggle" class="right-wrapper" :class="[mobileToggle ? '' : 'hidden']">
             <div class="logo text-hidden">
-                <span class="bg">{{ siteUrl[0] }}</span>
-                <span class="sm">.{{ siteUrl[1] }}</span>
+                <span class="bg">{{ stieDomain[0] }}</span>
+                <span class="sm">.{{ stieDomain[1] }}</span>
             </div>
             <div class="content">
                 <el-row :gutter="20">

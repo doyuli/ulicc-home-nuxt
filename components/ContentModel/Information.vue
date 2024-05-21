@@ -11,7 +11,6 @@ const innerWidth = useInnerWidth()
 // 时光胶囊盒子开启状态
 const timeCapsuleToggle = useTimeCapsuleToggle()
 // 站点地址分割
-const siteUrl = stieDomain.split('.')
 const avatar = 'image/avatar.jpg'
 // 站点头像
 const siteLogo = logo ? logo : avatar
@@ -69,8 +68,8 @@ const onMobileClick = () => {
         <div class="logo">
             <img class="logo-img" :src="siteLogo" alt="logo" />
             <div class="name text-hidden">
-                <span class="bg">{{ siteUrl[0] }}</span>
-                <span class="sm">.{{ siteUrl[1] }}</span>
+                <span class="bg">{{ stieDomain[0] }}</span>
+                <span class="sm">.{{ stieDomain[1] }}</span>
             </div>
         </div>
         <!-- 简介 -->

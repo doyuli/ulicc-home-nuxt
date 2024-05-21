@@ -20,7 +20,7 @@ siteConfig: {
     // 首页头像装饰
     siteLogo: '',
     // 首页域名装饰
-    stieDomain: 'example.cn',
+    stieDomain: ['example', 'cn'],
     // 页脚icp备案
     author: '阿哦',
     // 页脚icp备案
