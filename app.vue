@@ -12,13 +12,15 @@ import '~/assets/css/global.scss'
 import '~/assets/css/base.css'
 
 // 获取站点配置
-const appConfig = useAppConfig()
-const { siteConfig: { siteName, consoleText } } = appConfig
+const { siteConfig: { siteName, siteDescription, siteKeywords, consoleText } } = useAppConfig()
 
 // 设置站点SEOMeta
 useSeoMeta({
   title: siteName,
-  description: '这是我的神奇网站，让我来告诉你关于它的一切。',
+  ogTitle: siteName,
+  description: siteDescription,
+  ogDescription: siteDescription,
+  keywords: siteKeywords,
 })
 
 // 获取全局状态管理
@@ -72,7 +74,7 @@ const init = () => {
   loading.value = false
 
   // 控制台输出
-  console.log(
+  consoleText && console.log(
     `%c${consoleText}`,
     'color: rgb(30,152,255)'
   );

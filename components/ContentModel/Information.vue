@@ -10,10 +10,8 @@ const { siteConfig: { stieDomain, siteLogo: logo } } = useAppConfig()
 const innerWidth = useInnerWidth()
 // 时光胶囊盒子开启状态
 const timeCapsuleToggle = useTimeCapsuleToggle()
-// 站点地址分割
-const avatar = 'image/avatar.jpg'
 // 站点头像
-const siteLogo = logo ? logo : avatar
+const siteLogo = logo ? logo : 'image/avatar.jpg'
 // 站点描述信息
 const descriptionText = reactive({
     hello: 'Hello World !',

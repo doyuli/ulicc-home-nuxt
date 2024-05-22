@@ -2,6 +2,10 @@ export default defineAppConfig({
     siteConfig: {
         // 站点名称
         siteName: '阿哦的主页',
+        // 站点描述
+        siteDescription: '这是我的神奇网站，让我来告诉你关于它的一切。',
+        // 站点关键词
+        siteKeywords: '阿哦的主页,个人站点',
         // 首页头像装饰
         siteLogo: '',
         // 首页域名装饰
@@ -14,13 +18,6 @@ export default defineAppConfig({
         siteStart: '',
         // 加载完成控制台输出文本
         consoleText: '启动成功',
-    },
-    musicConfig: {
-        // 歌曲服务器 ( netease-网易云, tencent-qq音乐 )
-        serveType: 'netease',
-        // 播放类型 ( song-歌曲, playlist-播放列表, album-专辑, search-搜索, artist-艺术家 )
-        songType: 'playlist',
-        songId: '9379831714'
     },
     // 站点链接
     webLinks: [

@@ -1,6 +1,6 @@
 # ulicc-home-nuxt
 
-> 我的首页 | 一个基于 Nuxt 的个人首页站点
+> 一个基于 Nuxt 的个人首页站点
 
 ## 🎉 功能
 
@@ -11,12 +11,17 @@
 - 🎨 鼠标中键弹出壁纸展示模式 
 
 ## ⚙️ 配置
-> 请修改项目 `/.env.example` `/app.config.example.ts` 文件，并去掉 example 标识
+> 请修改项目 `/.env.example` `/app.config.example.ts` 文件，并去掉 .example 标识
 
 ```js
+// 站点配置
 siteConfig: {
     // 站点名称
     siteName: '阿哦的主页',
+    // 站点描述
+    siteDescription: '这是我的神奇网站，让我来告诉你关于它的一切。',
+    // 站点关键词
+    siteKeywords: '阿哦的主页,个人站点',
     // 首页头像装饰
     siteLogo: '',
     // 首页域名装饰
@@ -30,6 +35,10 @@ siteConfig: {
     // 加载完成控制台输出文本
     consoleText: '启动成功',
 },
+// 站点链接
+webLinks: [],
+// 社交链接
+socialLinks: []
 ```
 
 ## 📦️ 运行
