@@ -11,5 +11,11 @@ export default defineNuxtConfig({
     // https://icones.js.org/collection/bxl
     'nuxt-icon',
   ],
+  nitro: {
+    prerender: {
+      // 预构建时出现错误抛出
+      failOnError: true, 
+    }
+  }
 })
 
