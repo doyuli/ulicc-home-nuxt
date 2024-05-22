@@ -89,7 +89,14 @@ const initPlayer = () => {
     nextTick(async () => {
         try {
             const { data: result, pending, error, refresh } = await useFetch('/api/music', {
-                default: () => ({ list: [] })
+                default: () => ({ list: [] }),
+                query: {
+                    // 歌曲服务器 ( netease-网易云, tencent-qq音乐 )
+                    server: 'netease',
+                    // 播放类型 ( song-歌曲, playlist-播放列表, album-专辑, search-搜索, artist-艺术家 )
+                    type: 'playlist',
+                    id:  '9379831714'
+                }
             })
             const list = result!.value!.list
             playIndex.value = Math.floor(Math.random() * list.length);

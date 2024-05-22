@@ -7,16 +7,17 @@ interface Music {
 }
 
 export default defineEventHandler(async (event) => {
-    const runtimeConfig = useRuntimeConfig()
-    const { musicApi } = runtimeConfig
-    const { musicConfig: { serveType, songType, songId } } = useAppConfig()
+    // 获取查询参数
+    const query = getQuery(event)
+    // 获取环境变量
+    const { musicApi } = useRuntimeConfig()
     try {
-        const result: Music[] = await $fetch(`${musicApi}?server=${serveType}&type=${songType}&id=${songId}`)
+        const result: Music[] = await $fetch(musicApi, { query: query })
         return {
             list: result
         }
     } catch (error: any) {
-        console.log('Hitokoto Error： ', error.message);
+        console.log('Music Error： ', error.message);
         return {
             list: []
         }

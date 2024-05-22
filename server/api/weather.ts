@@ -1,8 +1,8 @@
 
 
 export default defineEventHandler(async (event) => {
-  const runtimeConfig = useRuntimeConfig()
-  const { weatherKey } = runtimeConfig
+  // 获取环境变量
+  const { weatherKey } = useRuntimeConfig()
 
   let result = {
     weather: '', // 天气现象
