@@ -52,9 +52,13 @@ npm run dev
 # 打包
 npm run build
 
+# 生成静态站点
+npm run generate
+
 # 本地预览生产版本
 npm run preview
 
-# 生成静态站点
+# 打包传统 SPA 应用
+# 修改 nuxt.config.ts 文件 ssr: false
 npm run generate
 ```

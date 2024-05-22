@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     weatherKey: '',
     musicApi: ''
   },
+  ssr: true,
   modules: [
     '@element-plus/nuxt',
     // https://icones.js.org/collection/bxl
